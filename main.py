@@ -13,7 +13,7 @@ def random_writes():
 
 def random_reads():
     f=open(name, 'r')
-    for i in range(100):
+    for i in range(100**3):
         f.seek(rand(0, 5000), 0)
         f.read(int(1024**3))
     f.close()
