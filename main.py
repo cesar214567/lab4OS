@@ -21,22 +21,22 @@ def random_reads():
 def seq_writes():
     to_write ='HOLA'*1000000
     f=open(name, 'w')
-    for i in range(1000):
+    for i in range(1000**3):
         f.write(to_write)
     f.close()
 
 def seq_reads():
     f=open(name, 'r')
-    value = int(1000**3)
-    for i in range(4):
+    value = int(100**3)
+    for i in range(1000):
         #f.seek(0, 0)
         f.read(value)
     f.close()
 
 #seq_writes()
-#seq_reads()
+seq_reads()
 #random_writes()
-random_reads()
+#random_reads()
 
 # codigo para el iostat: iostat -x 1
 # ejecutar coddigo de python: python3 main.py
